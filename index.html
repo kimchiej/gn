@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Malam Ejoyy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #2c3e50;
+      color: #ecf0f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      flex-direction: column;
+    }
+
+    /* Animasi Latar Belakang Partikel */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      background: #fff;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: moveParticle 10s infinite;
+    }
+
+    @keyframes moveParticle {
+      0% { transform: translateY(-100vh) translateX(-100vw); opacity: 0.6; }
+      50% { transform: translateY(100vh) translateX(100vw); opacity: 0.4; }
+      100% { transform: translateY(-100vh) translateX(-100vw); opacity: 0.6; }
+    }
+
+    /* Animasi Teks Glowing */
+    .message {
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #fff;
+      text-transform: uppercase;
+      animation: textGlow 2s ease-in-out infinite alternate;
+      margin-bottom: 20px;
+    }
+
+    @keyframes textGlow {
+      0% {
+        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff;
+      }
+      100% {
+        text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+      }
+    }
+
+    /* Tombol dengan animasi modern */
+    .btn {
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      color: white;
+      padding: 15px 40px;
+      font-size: 1.5rem;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      margin-top: 40px;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Pesan spesial dengan efek muncul */
+    .special-message {
+      font-size: 1.5rem;
+      color: #fff;
+      opacity: 0; /* Pastikan pesan tersembunyi secara default */
+      transition: opacity 3s ease; /* Transisi opacity untuk animasi halus */
+      font-style: italic;
+      margin-top: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Partikel Animasi -->
+  <div class="particles">
+    <div class="particle" style="top: 20%; left: 10%; animation-duration: 12s;"></div>
+    <div class="particle" style="top: 50%; left: 30%; animation-duration: 15s;"></div>
+    <div class="particle" style="top: 10%; left: 80%; animation-duration: 20s;"></div>
+    <div class="particle" style="top: 70%; left: 50%; animation-duration: 18s;"></div>
+    <div class="particle" style="top: 80%; left: 60%; animation-duration: 22s;"></div>
+  </div>
+
+  <!-- Teks Animasi -->
+  <div class="message">haii sayangku ejoyy</div>
+
+  <!-- Tombol Interaktif -->
+  <button class="btn" onclick="showMessage()">pencet tombol ini vvibu</button>
+
+  <!-- Pesan Spesial -->
+  <div class="special-message" id="specialMessage">
+    goodnight, ejoyy. sleep well, sweet dreams, and i can't wait to see you in my dreams tonight 🤍
+  </div>
+
+  <script>
+    // Fungsi untuk menampilkan pesan spesial setelah tombol diklik
+    function showMessage() {
+      const messageElement = document.getElementById('specialMessage');
+      messageElement.style.opacity = 1; // Mengubah opacity menjadi 1 untuk menampilkan pesan
+
+      // Optional: Menambahkan alert untuk memperingati pesan
+      alert("WOY vvibu coba pencet ok");
+    }
+  </script>
+</body>
+</html>
